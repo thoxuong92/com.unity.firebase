@@ -1,0 +1,26 @@
+﻿{
+  "name": "com.unity.firebase",
+  "version": "1.0.0",
+  "displayName": "Unity Firebase Service",
+  "description": "Firebase Analytics, Remote Config, Ad Revenue Attribution & OAuth2 Editor Sync Tool for Unity Core Framework.",
+  "unity": "2021.3",
+  "keywords": [
+    "unity",
+    "firebase",
+    "analytics",
+    "remote-config",
+    "ad-revenue",
+    "tracking"
+  ],
+  "author": {
+    "name": "thoxuong92",
+    "url": "https://github.com/thoxuong92"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thoxuong92/com.unity.firebase.git"
+  },
+  "dependencies": {
+    "com.unity.core": "1.0.0"
+  }
+}

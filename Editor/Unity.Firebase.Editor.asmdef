@@ -1,0 +1,24 @@
+﻿{
+    "name": "Unity.Firebase.Editor",
+    "rootNamespace": "Unity.Firebase.Editor",
+    "references": [
+        "Unity.Core",
+        "Unity.Firebase",
+        "Unity.Core.Editor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "Google.Apis.Auth.dll",
+        "Google.Apis.Core.dll",
+        "Google.Apis.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
