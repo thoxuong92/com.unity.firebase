@@ -1,4 +1,4 @@
-<linker>
+﻿<linker>
   <assembly fullname="Firebase.App" preserve="all"/>
   <assembly fullname="Firebase.Analytics" preserve="all"/>
   <assembly fullname="Firebase.RemoteConfig" preserve="all"/>
@@ -7,6 +7,5 @@
   <assembly fullname="Google.Apis.Auth" preserve="all"/>
   <assembly fullname="Google.Apis.Core" preserve="all"/>
   <assembly fullname="Newtonsoft.Json" preserve="all"/>
-  <assembly fullname="WASD.Firebase" preserve="all"/>
-  <assembly fullname="WASD.Firebase.Editor" preserve="all"/>
+  <assembly fullname="Unity.Firebase" preserve="all"/>
 </linker>

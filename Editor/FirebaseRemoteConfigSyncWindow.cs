@@ -27,9 +27,9 @@ namespace Unity.Firebase.Editor
         private string _previewJson = "";
         private bool _isSyncing = false;
 
-        private const string PREF_KEY_PATH = "WASD_FIREBASE_KEY_PATH";
-        private const string PREF_PROJECT_ID = "WASD_FIREBASE_PROJECT_ID";
-        private const string PREF_EXPORT_PATH = "WASD_FIREBASE_EXPORT_PATH";
+        private const string PREF_KEY_PATH = "UNITY_FIREBASE_KEY_PATH";
+        private const string PREF_PROJECT_ID = "UNITY_FIREBASE_PROJECT_ID";
+        private const string PREF_EXPORT_PATH = "UNITY_FIREBASE_EXPORT_PATH";
 
         [MenuItem("Unity Core/Firebase/Remote Config Sync Tool", false, 15)]
         public static void ShowWindow()
