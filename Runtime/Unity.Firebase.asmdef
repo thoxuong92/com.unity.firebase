@@ -1,4 +1,4 @@
-﻿{
+{
     "name": "Unity.Firebase",
     "rootNamespace": "Unity.Firebase",
     "references": [
@@ -11,6 +11,12 @@
     "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [],
-    "versionDefines": [],
+    "versionDefines": [
+        {
+            "name": "com.google.firebase.app",
+            "expression": "",
+            "define": "FIREBASE_AVAILABLE"
+        }
+    ],
     "noEngineReferences": false
 }
