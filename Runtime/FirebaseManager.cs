@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading;
@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using Unity.Core.Logging;
 
-#if FIREBASE_AVAILABLE || UNITY_FIREBASE_ENABLED || WASD_FIREBASE_ENABLED || FIREBASE_APP_ENABLED
+#if FIREBASE_AVAILABLE || UNITY_FIREBASE_ENABLED || CORE_FIREBASE_ENABLED || FIREBASE_APP_ENABLED
 using Firebase;
 using Firebase.Analytics;
 using Firebase.Extensions;
@@ -60,7 +60,7 @@ namespace Unity.Firebase
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         public static void InitFirebaseManager()
         {
-#if FIREBASE_AVAILABLE || UNITY_FIREBASE_ENABLED || WASD_FIREBASE_ENABLED || FIREBASE_APP_ENABLED
+#if FIREBASE_AVAILABLE || UNITY_FIREBASE_ENABLED || CORE_FIREBASE_ENABLED || FIREBASE_APP_ENABLED
             try
             {
                 FirebaseApp.CheckAndFixDependenciesAsync().ContinueWithOnMainThread(task =>
@@ -177,7 +177,7 @@ namespace Unity.Firebase
                 return;
             }
 
-#if FIREBASE_AVAILABLE || UNITY_FIREBASE_ENABLED || WASD_FIREBASE_ENABLED || FIREBASE_REMOTECONFIG_ENABLED
+#if FIREBASE_AVAILABLE || UNITY_FIREBASE_ENABLED || CORE_FIREBASE_ENABLED || FIREBASE_REMOTECONFIG_ENABLED
             try
             {
                 FirebaseRemoteConfig.DefaultInstance.SetDefaultsAsync(KeyValuePairs)
@@ -199,7 +199,7 @@ namespace Unity.Firebase
 
         public static void FetchRemoteConfig(Action<bool> onComplete = null)
         {
-#if FIREBASE_AVAILABLE || UNITY_FIREBASE_ENABLED || WASD_FIREBASE_ENABLED || FIREBASE_REMOTECONFIG_ENABLED
+#if FIREBASE_AVAILABLE || UNITY_FIREBASE_ENABLED || CORE_FIREBASE_ENABLED || FIREBASE_REMOTECONFIG_ENABLED
             try
             {
                 FirebaseRemoteConfig.DefaultInstance.FetchAsync(TimeSpan.Zero).ContinueWithOnMainThread(fetchTask =>
@@ -247,7 +247,7 @@ namespace Unity.Firebase
 
         private static void InitializeAnalytics()
         {
-#if FIREBASE_AVAILABLE || UNITY_FIREBASE_ENABLED || WASD_FIREBASE_ENABLED || FIREBASE_ANALYTICS_ENABLED
+#if FIREBASE_AVAILABLE || UNITY_FIREBASE_ENABLED || CORE_FIREBASE_ENABLED || FIREBASE_ANALYTICS_ENABLED
             try
             {
                 FirebaseAnalytics.SetAnalyticsCollectionEnabled(true);
@@ -285,7 +285,7 @@ namespace Unity.Firebase
 
         public static T GetValue<T>(string key, T defaultValue = default)
         {
-#if FIREBASE_AVAILABLE || UNITY_FIREBASE_ENABLED || WASD_FIREBASE_ENABLED || FIREBASE_REMOTECONFIG_ENABLED
+#if FIREBASE_AVAILABLE || UNITY_FIREBASE_ENABLED || CORE_FIREBASE_ENABLED || FIREBASE_REMOTECONFIG_ENABLED
             if (IsRemoteConfigInitialized && Application.internetReachability != NetworkReachability.NotReachable)
             {
                 try

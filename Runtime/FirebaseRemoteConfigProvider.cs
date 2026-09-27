@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Threading.Tasks;
 using UnityEngine;
 using Unity.Core.Logging;
@@ -7,7 +7,7 @@ using Unity.Core.Services.RemoteConfig;
 namespace Unity.Firebase
 {
     /// <summary>
-    /// Adapter tích hợp Firebase Remote Config với hệ thống RemoteConfigService của WASD Framework.
+    /// Adapter tích hợp Firebase Remote Config với hệ thống RemoteConfigService của Unity Core Framework.
     /// Tự động trả về cấu hình an toàn khi mất mạng hoặc chưa fetch xong.
     /// </summary>
     public class FirebaseRemoteConfigProvider : IRemoteConfigProvider

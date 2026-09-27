@@ -4,7 +4,7 @@ All notable changes to this package will be documented in this file.
 
 ## [1.0.0] - 2026-08-25
 ### Added
-- Standardized package structure for WASD Mobile Studio and UPM.
+- Standardized package structure for Unity Package Manager (UPM).
 - Integrated `FirebaseAnalyticsProvider` implementing `IAnalyticsProvider` with standard ad events.
 - Integrated `FirebaseRemoteConfigProvider` implementing `IRemoteConfigProvider` with fallback support.
 - Integrated `FirebaseTrackingProvider` implementing `ITrackingProvider` for impression-level ad revenue.

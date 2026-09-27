@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Unity.Core.Logging;
 using Unity.Core.Services.Ads;
 using Unity.Core.Services.Tracking;
 
-#if FIREBASE_AVAILABLE || UNITY_FIREBASE_ENABLED || WASD_FIREBASE_ENABLED || FIREBASE_ANALYTICS_ENABLED
+#if FIREBASE_AVAILABLE || UNITY_FIREBASE_ENABLED || CORE_FIREBASE_ENABLED || FIREBASE_ANALYTICS_ENABLED
 using Firebase.Analytics;
 #endif
 
@@ -39,7 +39,7 @@ namespace Unity.Firebase
         {
             if (revenueInfo == null) return;
 
-#if FIREBASE_AVAILABLE || UNITY_FIREBASE_ENABLED || WASD_FIREBASE_ENABLED || FIREBASE_ANALYTICS_ENABLED
+#if FIREBASE_AVAILABLE || UNITY_FIREBASE_ENABLED || CORE_FIREBASE_ENABLED || FIREBASE_ANALYTICS_ENABLED
             try
             {
                 Parameter[] adParameters = {
@@ -73,7 +73,7 @@ namespace Unity.Firebase
             if (revenue.HasValue) dict["revenue"] = revenue.Value;
             if (!string.IsNullOrEmpty(currency)) dict["currency"] = currency;
 
-#if FIREBASE_AVAILABLE || UNITY_FIREBASE_ENABLED || WASD_FIREBASE_ENABLED || FIREBASE_ANALYTICS_ENABLED
+#if FIREBASE_AVAILABLE || UNITY_FIREBASE_ENABLED || CORE_FIREBASE_ENABLED || FIREBASE_ANALYTICS_ENABLED
             try
             {
                 if (dict.Count == 0)

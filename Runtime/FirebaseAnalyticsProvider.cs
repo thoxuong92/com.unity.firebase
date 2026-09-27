@@ -1,17 +1,17 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Unity.Core.Logging;
 using Unity.Core.Services.Analytics;
 
-#if FIREBASE_AVAILABLE || UNITY_FIREBASE_ENABLED || WASD_FIREBASE_ENABLED || FIREBASE_ANALYTICS_ENABLED
+#if FIREBASE_AVAILABLE || UNITY_FIREBASE_ENABLED || CORE_FIREBASE_ENABLED || FIREBASE_ANALYTICS_ENABLED
 using Firebase.Analytics;
 #endif
 
 namespace Unity.Firebase
 {
     /// <summary>
-    /// Adapter tích hợp Firebase Analytics với hệ thống AnalyticsService của WASD Framework.
+    /// Adapter tích hợp Firebase Analytics với hệ thống AnalyticsService của Unity Core Framework.
     /// Cung cấp bộ hàm tracking chuẩn hóa cho Ad Formats (App Open, Banner, Interstitial, Rewarded, MRec) và Gameplay.
     /// </summary>
     public class FirebaseAnalyticsProvider : IAnalyticsProvider
@@ -38,7 +38,7 @@ namespace Unity.Firebase
         {
             if (string.IsNullOrEmpty(eventName)) return;
 
-#if FIREBASE_AVAILABLE || UNITY_FIREBASE_ENABLED || WASD_FIREBASE_ENABLED || FIREBASE_ANALYTICS_ENABLED
+#if FIREBASE_AVAILABLE || UNITY_FIREBASE_ENABLED || CORE_FIREBASE_ENABLED || FIREBASE_ANALYTICS_ENABLED
             try
             {
                 if (parameters == null || parameters.Count == 0)
@@ -95,7 +95,7 @@ namespace Unity.Firebase
         {
             if (string.IsNullOrEmpty(propertyName)) return;
 
-#if FIREBASE_AVAILABLE || UNITY_FIREBASE_ENABLED || WASD_FIREBASE_ENABLED || FIREBASE_ANALYTICS_ENABLED
+#if FIREBASE_AVAILABLE || UNITY_FIREBASE_ENABLED || CORE_FIREBASE_ENABLED || FIREBASE_ANALYTICS_ENABLED
             try
             {
                 FirebaseAnalytics.SetUserProperty(propertyName, propertyValue);
@@ -111,7 +111,7 @@ namespace Unity.Firebase
 
         public void SetUserId(string userId)
         {
-#if FIREBASE_AVAILABLE || UNITY_FIREBASE_ENABLED || WASD_FIREBASE_ENABLED || FIREBASE_ANALYTICS_ENABLED
+#if FIREBASE_AVAILABLE || UNITY_FIREBASE_ENABLED || CORE_FIREBASE_ENABLED || FIREBASE_ANALYTICS_ENABLED
             try
             {
                 FirebaseAnalytics.SetUserId(userId);
