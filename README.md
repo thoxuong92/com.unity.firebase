@@ -1,4 +1,4 @@
-﻿# Unity Firebase Service (UPM Package)
+# Unity Firebase Service (UPM Package)
 
 Package module quản lý và kết nối toàn diện hệ sinh thái **Google Firebase** (Firebase Analytics, Remote Config, Ad Revenue Attribution & Editor Sync Tooling) cho **Unity Core Framework**.
 
@@ -64,4 +64,5 @@ Thêm dependency trỏ tới kho lưu trữ GitHub:
 ---
 
 ## 👨‍💻 Tác Giả & Bản Quyền
+- **Tác giả**: **joukyuu**
 - **Repository**: [thoxuong92/com.unity.firebase](https://github.com/thoxuong92/com.unity.firebase.git)
